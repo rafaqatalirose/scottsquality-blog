@@ -23,8 +23,9 @@ nav {
 
 nav a {
   color: #fff;
-  margin: 0 10px;
+  margin: 0 15px;
   text-decoration: none;
+  font-weight: bold;
 }
 
 nav a:hover {
@@ -33,6 +34,8 @@ nav a:hover {
 
 main {
   padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .post-list {
@@ -47,10 +50,45 @@ article {
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
+article a {
+  color: #2c3e50;
+  text-decoration: none;
+}
+
+article a:hover {
+  text-decoration: underline;
+}
+
 footer {
   background: #2c3e50;
   color: #fff;
-  text-align: center;
-  padding: 10px;
+  padding: 20px;
   margin-top: 20px;
+  text-align: center;
+}
+
+footer div {
+  margin: 10px 0;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  margin: 5px 0;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+  }
+  nav a {
+    margin: 5px 0;
+  }
 }
