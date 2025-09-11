@@ -1,3 +1,5 @@
-theme: minima
 title: Scotts Quality Blog
-description: Best SEO blog for reviews and shopping guides
+description: Latest product reviews, tips, and guides
+theme: minima
+plugins:
+  - jekyll-feed
