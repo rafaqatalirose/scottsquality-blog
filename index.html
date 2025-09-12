@@ -1,7 +1,23 @@
 ---
-layout: home
-title: "Scotts Quality Blog"
+layout: default
 ---
 
-<h1>Welcome to Scotts Quality Blog</h1>
-<p>Discover SEO-optimized guides on kitchenware and home improvement.</p>
+<section class="post-list">
+  <h2>📝 Latest Articles</h2>
+  {% for post in site.posts limit:5 %}
+    <article>
+      <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+      <p>{{ post.excerpt | strip_html | truncate: 150 }}</p>
+      <a href="{{ post.url | relative_url }}">Read More →</a>
+    </article>
+  {% endfor %}
+</section>
+
+<aside class="sidebar">
+  <h3>📂 Categories</h3>
+  <ul>
+    {% for category in site.categories %}
+      <li><a href="{{ '/categories.html#' | append: category[0] | relative_url }}">{{ category[0] }}</a></li>
+    {% endfor %}
+  </ul>
+</aside>
