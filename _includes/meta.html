@@ -1,0 +1,17 @@
+<title>{{ page.title | escape }} | {{ site.title }}</title>
+<meta name="description" content="{{ page.excerpt | strip_html | truncate: 160 }}">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Open Graph (Facebook / WhatsApp sharing) -->
+<meta property="og:title" content="{{ page.title | escape }}">
+<meta property="og:description" content="{{ page.excerpt | strip_html | truncate: 160 }}">
+<meta property="og:type" content="article">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:site_name" content="{{ site.title }}">
+<meta property="og:image" content="{{ site.url }}/assets/images/og-image.jpg">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ page.title | escape }}">
+<meta name="twitter:description" content="{{ page.excerpt | strip_html | truncate: 160 }}">
+<meta name="twitter:image" content="{{ site.url }}/assets/images/og-image.jpg">
