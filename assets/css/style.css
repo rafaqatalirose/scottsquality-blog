@@ -9,37 +9,41 @@ body {
 }
 
 /* Header */
-header {
+.site-header {
   background: #222;
-  color: #fff;
-  padding: 15px 20px;
+  padding: 10px 20px;
+}
+
+.header-flex {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-header .logo img {
-  height: 40px;
+/* Logo */
+.logo img {
+  max-height: 50px;
+  width: auto;
+  border-radius: 6px;
 }
 
-header nav ul {
+/* Navigation */
+.site-nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
+  gap: 20px;
 }
 
-header nav ul li {
-  margin-left: 20px;
-}
-
-header nav ul li a {
+.site-nav a {
   color: #fff;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
+  transition: color 0.3s ease;
 }
 
-header nav ul li a:hover {
+.site-nav a:hover {
   color: #f4c542;
 }
 
@@ -84,21 +88,7 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    text-align: center;
-  }
-  
-  header nav ul {
-    flex-direction: column;
-  }
-  
-  header nav ul li {
-    margin: 10px 0;
-  }
-}
+/* Layout */
 .container {
   display: flex;
   max-width: 1200px;
@@ -126,64 +116,6 @@ footer a:hover {
   font-size: 18px;
   color: #333;
 }
-.navbar {
-  background: #222;
-  padding: 10px;
-  text-align: center;
-}
-.navbar ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.navbar ul li {
-  display: inline-block;
-  margin: 0 15px;
-}
-.navbar ul li a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-}
-.navbar ul li a:hover {
-  color: #f39c12;
-}
-/* Header Styling */
-.site-header {
-  background: #2d3e50;
-  padding: 10px 0;
-}
-
-.header-flex {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.logo img {
-  height: 50px;
-  width: auto;
-  border-radius: 8px;
-}
-
-.site-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  gap: 20px;
-}
-
-.site-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-.site-nav a:hover {
-  color: #ffd700;
-}
 
 /* Responsive (Mobile) */
 @media (max-width: 768px) {
@@ -194,11 +126,19 @@ footer a:hover {
 
   .site-nav ul {
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
     margin-top: 10px;
   }
 
   .logo img {
-    height: 40px;
+    max-height: 40px;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .content, .sidebar {
+    width: 100%;
   }
 }
