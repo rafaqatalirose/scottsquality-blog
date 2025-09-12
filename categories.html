@@ -1,32 +1,16 @@
 ---
 layout: default
+title: "Categories"
 ---
 
-<div class="container" style="max-width:1000px; margin:auto; padding:20px;">
-  <h1 style="text-align:center; margin-bottom:20px;">
-    {{ page.category | capitalize }}
-  </h1>
-
-  <div class="post-list" style="display:flex; flex-direction:column; gap:20px;">
-    {% assign posts = site.categories[page.category] %}
-    {% if posts %}
-      {% for post in posts %}
-        <div style="border:1px solid #ddd; padding:15px; border-radius:8px; background:#fff;">
-          <h2 style="margin:0 0 10px 0;">
-            <a href="{{ post.url }}" style="text-decoration:none; color:#0073e6;">
-              {{ post.title }}
-            </a>
-          </h2>
-          <p style="margin:0 0 10px 0; color:#666;">
-            {{ post.date | date: "%B %d, %Y" }}
-          </p>
-          <p style="margin:0; color:#444;">
-            {{ post.excerpt | strip_html | truncate: 150 }}
-          </p>
-        </div>
-      {% endfor %}
-    {% else %}
-      <p>No posts found in this category.</p>
-    {% endif %}
-  </div>
-</div>
+<h1>Browse by Categories</h1>
+<ul class="category-list">
+  {% assign sorted_categories = site.categories | sort %}
+  {% for category in sorted_categories %}
+    <li>
+      <a href="{{ '/categories/' | append: category[0] | relative_url }}">
+        {{ category[0] | capitalize }} ({{ category[1].size }})
+      </a>
+    </li>
+  {% endfor %}
+</ul>
