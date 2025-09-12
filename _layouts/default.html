@@ -14,42 +14,14 @@
 <body>
   {% include nav.html %}
   {% include header.html %}
+
   <div class="container">
-  <main class="content">
-    {{ content }}
-  </main>
+    <main class="content">
+      {{ content }}
+    </main>
+    {% include sidebar.html %}
+  </div>
 
-  {% include sidebar.html %}
-</div>
-  <header>
-    <h1><a href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
-    <nav>
-      <a href="{{ site.baseurl }}/">Home</a>
-      <a href="{{ site.baseurl }}/categories.html">Categories</a>
-      <a href="https://scottsqualityimprovements.store/" target="_blank">Shop Now</a>
-    </nav>
-  </header>
-
-  <main>
-    {{ content }}
-  </main>
-
-  <footer>
-    <div>
-      <h3>For More</h3>
-      <a href="https://scottsqualityimprovements.store/aboutUs" target="_blank">About Us</a>
-      <a href="https://scottsqualityimprovements.store/contactUs" target="_blank">Contact Us</a>
-    </div>
-    <div>
-      <h3>Customer Support</h3>
-      <a href="https://scottsqualityimprovements.store/privacyPolicy" target="_blank">Privacy Policy</a>
-      <a href="https://scottsqualityimprovements.store/termsConditions" target="_blank">Terms & Conditions</a>
-      <a href="https://scottsqualityimprovements.store/returnPolicy" target="_blank">Return Policy</a>
-      <a href="https://scottsqualityimprovements.store/paymentMethods" target="_blank">Payment Methods</a>
-      <a href="https://scottsqualityimprovements.store/shippingPolicy" target="_blank">Shipping Policy</a>
-    </div>
-    <p>Copyright &copy; 2025 Scotts Quality</p>
-  </footer>
   {% include footer.html %}
 </body>
 </html>
