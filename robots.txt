@@ -1,1 +1,0 @@
-User-agent: * Allow: / Allow: /blog/ Sitemap: https://scottsqualityimprovements.store/sitemap.xml
