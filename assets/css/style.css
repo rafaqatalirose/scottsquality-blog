@@ -142,3 +142,9 @@ footer a:hover {
     width: 100%;
   }
 }
+img {
+    max-width: 100%; /* Ensures images don't overflow their container */
+    height: auto;    /* Maintains aspect ratio */
+    display: block;  /* Removes extra space below images */
+    margin: 0 auto;  /* Centers images if they are smaller than 100% width */
+}
