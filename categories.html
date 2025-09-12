@@ -1,11 +1,23 @@
 ---
 layout: default
 title: Categories
+permalink: /categories/
 ---
 
-<h2>Browse by Category</h2>
-<ul>
-  {% for category in site.categories %}
-    <li><a href="{{ site.baseurl }}/categories/{{ category[0] }}">{{ category[0] }}</a></li>
-  {% endfor %}
-</ul>
+<div class="container" style="max-width:1000px; margin:auto; padding:20px;">
+  <h1 style="text-align:center; margin-bottom:20px;">Browse by Category</h1>
+  
+  <div class="category-list" style="display:flex; flex-wrap:wrap; gap:15px; justify-content:center;">
+    {% assign categories = site.categories | sort %}
+    {% for category in categories %}
+      <div style="flex:1 1 200px; min-width:200px; border:1px solid #ddd; padding:15px; border-radius:8px; background:#f9f9f9; text-align:center;">
+        <h2 style="margin:0 0 10px 0;">
+          <a href="/categories/{{ category[0] | slugify }}/" style="text-decoration:none; color:#333;">
+            {{ category[0] | capitalize }}
+          </a>
+        </h2>
+        <p>{{ category[1].size }} Posts</p>
+      </div>
+    {% endfor %}
+  </div>
+</div>
