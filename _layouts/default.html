@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  <meta name="keywords" content="{{ page.tags | join: ', ' }}">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <link rel="icon" type="image/png" href="https://image.wed2c.com/2025/05/23/21/d14f861c-add6-460d-bf31-1a415205a088.jpg" alt="Scotts Quality" title="Scotts Quality">
+  {% seo %}
+</head>
+<body>
+  <header>
+    <h1><a href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
+    <nav>
+      <a href="{{ site.baseurl }}/">Home</a>
+      <a href="{{ site.baseurl }}/categories.html">Categories</a>
+      <a href="https://scottsqualityimprovements.store/" target="_blank">Shop Now</a>
+    </nav>
+  </header>
+
+  <main>
+    {{ content }}
+  </main>
+
+  <footer>
+    <div>
+      <h3>For More</h3>
+      <a href="https://scottsqualityimprovements.store/aboutUs" target="_blank">About Us</a>
+      <a href="https://scottsqualityimprovements.store/contactUs" target="_blank">Contact Us</a>
+    </div>
+    <div>
+      <h3>Customer Support</h3>
+      <a href="https://scottsqualityimprovements.store/privacyPolicy" target="_blank">Privacy Policy</a>
+      <a href="https://scottsqualityimprovements.store/termsConditions" target="_blank">Terms & Conditions</a>
+      <a href="https://scottsqualityimprovements.store/returnPolicy" target="_blank">Return Policy</a>
+      <a href="https://scottsqualityimprovements.store/paymentMethods" target="_blank">Payment Methods</a>
+      <a href="https://scottsqualityimprovements.store/shippingPolicy" target="_blank">Shipping Policy</a>
+    </div>
+    <p>Copyright &copy; 2025 Scotts Quality</p>
+  </footer>
+</body>
+</html>
