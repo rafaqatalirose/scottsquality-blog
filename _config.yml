@@ -1,7 +1,7 @@
 title: "Scotts Quality Blog"
 description: "SEO optimized blog about kitchen gadgets & home improvement."
 baseurl: "" # agar repo naam ke saath nahi chalana
-url: "https://scottsqualityimprovements.store"
+url: "https://blog.scottsqualityimprovements.store"
 
 theme: minima
 plugins:
