@@ -3,22 +3,16 @@ layout: default
 ---
 
 <h2>Latest Blog Posts</h2>
-<ul>
-  {% for post in site.posts %}
-    <li>
-      <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-      <p>{{ post.excerpt }}</p>
-    </li>
-  {% endfor %}
-</ul>
 
-{% for post in site.posts %}
-<article class="post-card">
-  {% if post.thumbnail %}
-    <img src="{{ post.thumbnail | relative_url }}" alt="{{ post.title }}" class="post-thumb">
-  {% endif %}
-  <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-  <p>{{ post.description | truncate: 150 }}</p>
-  <a href="{{ post.url | relative_url }}" class="read-more">Read More</a>
-</article>
-{% endfor %}
+<div class="posts-grid">
+  {% for post in site.posts %}
+  <article class="post-card">
+    {% if post.thumbnail %}
+      <img src="{{ post.thumbnail | relative_url }}" alt="{{ post.title }}" class="post-thumb">
+    {% endif %}
+    <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+    <p>{{ post.description | truncate: 150 }}</p>
+    <a href="{{ post.url | relative_url }}" class="read-more">Read More</a>
+  </article>
+  {% endfor %}
+</div>
