@@ -5,9 +5,26 @@ layout: default
 <h1>Posts in "{{ page.category | capitalize }}"</h1>
 <ul>
   {% for post in site.categories[page.category] %}
-    <li>
+    <li class="post-card">
+      {% if post.thumbnail %}
+        <img src="{{ post.thumbnail }}" alt="{{ post.title }}" class="post-thumb">
+      {% endif %}
       <a href="{{ post.url | relative_url }}">{{ post.title }}</a>  
       <small>({{ post.date | date: "%b %d, %Y" }})</small>
     </li>
   {% endfor %}
 </ul>
+
+<style>
+.post-card {
+  margin-bottom: 20px;
+  list-style: none;
+}
+.post-thumb {
+  width: 200px;
+  height: auto;
+  border-radius: 6px;
+  display: block;
+  margin-bottom: 8px;
+}
+</style>
