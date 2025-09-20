@@ -1,18 +1,44 @@
 ---
 layout: default
-title: "Scotts Quality Improvements Blog - Your Guide to Home & Kitchen Enhancements"
 ---
 
-<h1>Welcome to Scotts Quality Improvements Blog!<!-- HomePage_Welcome_Heading --></h1>
-<p>Your trusted source for enhancing everyday living. Dive into our expertly crafted, product articles and discover insightful guides, innovative kitchen gadgets, and smart home improvement solutions. At Scotts Quality Improvements, we believe in bringing you products and ideas that elevate your home and simplify your life. Explore, learn, and improve with us!</p>
+<h1>Welcome to Scotts Quality Improvements Blog!</h1>
+<p>
+  Your trusted source for enhancing everyday living. Dive into our expertly crafted, product articles and discover
+  insightful guides, innovative kitchen gadgets, and smart home improvement solutions. At Scotts Quality Improvements,
+  we believe in bringing you products and ideas that elevate your home and simplify your life. Explore, learn, and
+  improve with us!
+</p>
 
-<section class="post-list">
-  {% for post in site.posts limit:10 %}
-    <article>
-      <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+<hr>
+
+<ul>
+  {% for post in site.posts %}
+    <li class="post-card">
+      {% if post.thumbnail %}
+        <a href="{{ post.url | relative_url }}">
+          <img src="{{ post.thumbnail }}" alt="{{ post.title }}" class="post-thumb">
+        </a>
+      {% endif %}
+      <h2>
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      </h2>
       <p>{{ post.excerpt | strip_html | truncate: 150 }}</p>
       <a href="{{ post.url | relative_url }}">Read More</a>
-    </article>
-    <hr>
+    </li>
   {% endfor %}
-</section>
+</ul>
+
+<style>
+.post-card {
+  margin-bottom: 30px;
+  list-style: none;
+}
+.post-thumb {
+  width: 300px;
+  height: auto;
+  border-radius: 6px;
+  display: block;
+  margin-bottom: 10px;
+}
+</style>
