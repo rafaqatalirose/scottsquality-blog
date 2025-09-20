@@ -4,7 +4,7 @@ description: "Transform your daily shower! Explore our High-Pressure Shower Head
 keywords: "High-Pressure Shower Head, Multiple Spray Settings, Easy Installation, Water Saving Shower Head, Pressurized Shower Head, ABS Shower Head, Bathroom Upgrade, Shower pressure booster, Bathroom renovation ideas"
 author: "ScottsQualityImprovements Blog"
 img: "assets/images/17259199910106-optimized.png"
-categories: ["bathroom", "reviews"]
+categories: ["home", "reviews"]
 tags: ["High Pressure", "Shower Head", "Easy Installation", "Water Saving", "Bathroom Upgrade"]
 ---
 
