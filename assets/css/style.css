@@ -272,3 +272,37 @@ body.dark-mode footer {
   color: #005bb5;
 }
 
+/* =========================
+   Categories Page Styling
+========================= */
+.categories-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0;
+  list-style: none;
+  margin: 20px 0;
+}
+
+.categories-list li {
+  flex: 1 1 200px; /* responsive width */
+}
+
+.categories-list a {
+  display: block;
+  padding: 15px 20px;
+  background: #0073e6;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 10px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.categories-list a:hover {
+  background: #005bb5;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+}
