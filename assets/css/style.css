@@ -306,36 +306,68 @@ body.dark-mode footer {
   transform: translateY(-3px);
   box-shadow: 0 5px 10px rgba(0,0,0,0.15);
 }
-/* All Posts Section */
+/* All Posts Section with Thumbnails */
 .all-posts {
   margin-top: 40px;
   padding: 20px;
-  background: #f9f9f9;
-  border-radius: 10px;
 }
 
 .all-posts h2 {
   font-size: 1.5rem;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   color: #222;
 }
 
-.all-posts ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+/* Grid for all posts */
+.all-posts-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
-.all-posts ul li {
-  margin-bottom: 8px;
+.post-card-small {
+  width: calc(33.333% - 13.33px); /* 3 posts per row with gap */
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.all-posts ul li a {
-  text-decoration: none;
+.post-card-small img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.post-card-small h3 {
+  margin: 10px;
+  font-size: 1rem;
+}
+
+.post-card-small a {
   color: #0073e6;
-  transition: color 0.3s ease;
+  text-decoration: none;
 }
 
-.all-posts ul li a:hover {
+.post-card-small a:hover {
   color: #005bb5;
+}
+
+.post-card-small:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 12px rgba(0,0,0,0.15);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .post-card-small {
+    width: calc(50% - 10px); /* 2 per row */
+  }
+}
+
+@media (max-width: 600px) {
+  .post-card-small {
+    width: 100%; /* 1 per row */
+  }
 }
