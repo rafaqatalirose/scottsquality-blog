@@ -153,9 +153,10 @@ footer a:hover {
   padding: 20px;
 }
 
+/* Sidebar */
 .sidebar {
-  width: 15%;       /* pehle 25% tha */
-  padding: 10px;    /* thoda kam padding */
+  width: 15%;         /* pehle 25% tha */
+  padding: 10px;      /* thoda kam padding */
   background: #f9f9f9;
   border-left: 1px solid #ddd;
 }
@@ -166,9 +167,13 @@ footer a:hover {
 
 .sidebar h3 {
   margin-bottom: 10px;
-  font-size: 18px;
+  font-size: 16px;    /* thoda chhota rakha taake neat lage */
   color: #333;
+  font-weight: 600;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
 }
+
 
 /* =========================
    Responsive (Mobile)
