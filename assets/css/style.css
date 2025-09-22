@@ -271,3 +271,54 @@ body.dark-mode footer {
 #toc li a:hover {
   color: #005bb5;
 }
+
+.site-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.site-nav li {
+  position: relative; /* for dropdown positioning */
+}
+
+.site-nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  padding: 8px 12px;
+  display: block;
+}
+
+.site-nav a:hover {
+  color: #f4c542;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%; /* below parent */
+  left: 0;
+  background: #222;
+  padding: 10px 0;
+  border-radius: 6px;
+  min-width: 150px;
+  z-index: 1000;
+}
+
+.dropdown-menu li a {
+  color: #fff;
+  padding: 8px 12px;
+}
+
+.dropdown-menu li a:hover {
+  background: #333;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
