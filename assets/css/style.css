@@ -154,8 +154,8 @@ footer a:hover {
 }
 
 .sidebar {
-  width: 20%;       /* pehle 25% tha */
-  padding: 15px;    /* thoda kam padding */
+  width: 15%;       /* pehle 25% tha */
+  padding: 10px;    /* thoda kam padding */
   background: #f9f9f9;
   border-left: 1px solid #ddd;
 }
