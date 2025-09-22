@@ -154,7 +154,7 @@ footer a:hover {
 }
 
 .sidebar {
-  width: 320px;             /* fixed width for ad */
+  width: 300px;             /* fixed width for ad */
   max-width: 100%;          /* responsive mobile fallback */
   padding: 10px;
   background: #f9f9f9;
