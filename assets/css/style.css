@@ -155,25 +155,25 @@ footer a:hover {
 
 /* Sidebar */
 .sidebar {
-  width: 18%;              /* pehle 25% tha */
-  max-width: 260px;        /* limit laga di */
-  padding: 10px 15px;
+  width: 12%;              /* aur chhota kar diya */
+  max-width: 200px;        /* zyada se zyada 200px */
+  padding: 8px 12px;       /* kam padding */
   background: #f9f9f9;
   border-left: 1px solid #ddd;
-  font-size: 0.95rem;      /* text thoda chhota */
+  font-size: 0.9rem;       /* text thoda aur chhota */
   line-height: 1.4;
 }
 
 .sidebar .widget {
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .sidebar h3 {
-  margin-bottom: 12px;
-  font-size: 17px;
+  margin-bottom: 10px;
+  font-size: 16px;
   color: #222;
   border-bottom: 1px solid #ddd;
-  padding-bottom: 5px;
+  padding-bottom: 4px;
 }
 
 .sidebar ul {
@@ -183,14 +183,14 @@ footer a:hover {
 }
 
 .sidebar ul li {
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .sidebar ul li a {
   text-decoration: none;
   color: #0073e6;
   transition: color 0.3s;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 }
 
 .sidebar ul li a:hover {
