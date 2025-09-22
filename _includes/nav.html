@@ -1,15 +1,16 @@
-<nav class="site-nav">
-  <ul>
-    <li><a href="{{ site.baseurl }}/">Home</a></li>
-    <li class="dropdown">
-      <a href="{{ site.baseurl }}/categories.html">Categories</a>
-      <ul class="dropdown-menu">
-        <li><a href="{{ site.baseurl }}/categories/category1.html">Category 1</a></li>
-        <li><a href="{{ site.baseurl }}/categories/category2.html">Category 2</a></li>
-        <li><a href="{{ site.baseurl }}/categories/category3.html">Category 3</a></li>
-      </ul>
-    </li>
-    <li><a href="https://scottsqualityimprovements.store/" target="_blank">Shop</a></li>
-  </ul>
-</nav>
+<ul class="site-nav">
+  <li><a href="{{ site.baseurl }}/">Home</a></li>
 
+  <li class="dropdown">
+    <a href="{{ site.baseurl }}/categories.html">Categories</a>
+    <ul class="dropdown-menu">
+      {% for category in site.categories %}
+        <li>
+          <a href="{{ category.url | relative_url }}">{{ category.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </li>
+
+  <li><a href="https://scottsqualityimprovements.store/" target="_blank">Shop</a></li>
+</ul>
