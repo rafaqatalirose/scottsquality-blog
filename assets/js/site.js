@@ -54,8 +54,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.querySelectorAll('.dropdown > a').forEach(item => {
   item.addEventListener('click', e => {
-    e.preventDefault(); // prevent default link
-    const dropdown = item.nextElementSibling;
-    dropdown.style.display = (dropdown.style.display === 'block') ? 'none' : 'block';
+    e.preventDefault();
+    const menu = item.nextElementSibling;
+    menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
   });
 });
