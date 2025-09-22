@@ -371,3 +371,10 @@ body.dark-mode footer {
     width: 100%; /* 1 per row */
   }
 }
+.post-card-small img.post-thumb {
+  width: 100%;
+  height: 150px; /* chhota cards ke liye */
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
