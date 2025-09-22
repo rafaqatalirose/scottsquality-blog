@@ -51,3 +51,23 @@ document.addEventListener("DOMContentLoaded", function () {
     tocContainer.appendChild(li);
   });
 });
+
+#toc-container {
+  position: sticky;
+  top: 80px; /* header ke height ke hisaab se adjust karo */
+  float: right;
+  width: 220px; /* TOC ki width */
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+article {
+  display: flex;
+  gap: 20px;
+}
+
+article > div { /* content ke liye */
+  flex: 1;
+}
