@@ -56,7 +56,9 @@ layout: default
         <div class="post-card-small">
           {% if post.image %}
             <a href="{{ post.url | relative_url }}">
-              <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" title="{{ post.title }}">
+              <img src="{{ post.image | relative_url }}" 
+                   alt="{{ post.title }}" 
+                   title="{{ post.title }}">
             </a>
           {% endif %}
           <h3>
