@@ -23,15 +23,12 @@ img {
 .site-header {
   background: #222;
   padding: 10px 20px;
-  position: relative;
-  z-index: 999;
 }
 
 .header-flex {
   display: flex;
-  align-items: center; /* vertically center logo + nav + button */
+  align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
 }
 
 /* Logo */
@@ -41,22 +38,7 @@ img {
   border-radius: 6px;
 }
 
-/* Dark Mode Button */
-.theme-btn {
-  font-size: 1.2rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: #fff;
-}
-
-/* =========================
-   Navigation
-========================= */
-.site-nav {
-  position: relative; /* parent for dropdown */
-}
-
+/* Navigation */
 .site-nav ul {
   list-style: none;
   margin: 0;
@@ -65,51 +47,15 @@ img {
   gap: 20px;
 }
 
-.site-nav li {
-  position: relative; /* dropdown relative */
-}
-
 .site-nav a {
-  color: #fff;        /* text visible */
-  display: block;
-  padding: 8px 12px;
+  color: #fff;
   text-decoration: none;
   font-weight: 600;
+  transition: color 0.3s ease;
 }
 
 .site-nav a:hover {
   color: #f4c542;
-}
-
-/* =========================
-   Dropdown Menu
-========================= */
-.dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 100%;          /* below parent */
-  left: 0;
-  background: #222;
-  padding: 10px 0;
-  border-radius: 6px;
-  min-width: 180px;
-  z-index: 1000;
-}
-
-.dropdown-menu li a {
-  color: #fff;
-  padding: 8px 12px;
-  display: block;
-  text-decoration: none;
-}
-
-.dropdown-menu li a:hover {
-  background: #333;
-}
-
-/* Show dropdown on hover */
-.dropdown:hover .dropdown-menu {
-  display: block;
 }
 
 /* =========================
@@ -174,52 +120,6 @@ img {
 }
 
 /* =========================
-   Sidebar
-========================= */
-.sidebar {
-  width: 12%;
-  max-width: 200px;
-  padding: 8px 12px;
-  background: #f9f9f9;
-  border-left: 1px solid #ddd;
-  font-size: 0.9rem;
-  line-height: 1.4;
-}
-
-.sidebar .widget {
-  margin-bottom: 18px;
-}
-
-.sidebar h3 {
-  margin-bottom: 10px;
-  font-size: 16px;
-  color: #222;
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 4px;
-}
-
-.sidebar ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.sidebar ul li {
-  margin-bottom: 6px;
-}
-
-.sidebar ul li a {
-  text-decoration: none;
-  color: #0073e6;
-  transition: color 0.3s;
-  font-size: 0.85rem;
-}
-
-.sidebar ul li a:hover {
-  color: #005bb5;
-}
-
-/* =========================
    Footer
 ========================= */
 footer {
@@ -253,6 +153,31 @@ footer a:hover {
   padding: 20px;
 }
 
+.sidebar {
+  width: 300px;             /* fixed width for ad */
+  max-width: 100%;          /* responsive mobile fallback */
+  padding: 10px;
+  background: #f9f9f9;
+  border-left: 1px solid #ddd;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* Sidebar height limited for single widget (ad) */
+.sidebar .widget, .sidebar #toc-container, .sidebar .ad-widget {
+  margin-bottom: 15px;
+}
+
+/* Optional: center ad inside sidebar */
+.ad-widget img {
+  display: block;
+  margin: 0 auto;
+  width: 300px;
+  height: 250px;
+}
+
+
+
 /* =========================
    Responsive (Mobile)
 ========================= */
@@ -281,3 +206,69 @@ footer a:hover {
     width: 85%;
   }
 }
+/* =========================
+   Dark Mode
+========================= */
+body.dark-mode {
+  background: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode .site-header {
+  background: #111;
+}
+
+body.dark-mode .site-nav a {
+  color: #ddd;
+}
+
+body.dark-mode .post-card {
+  background: #1e1e1e;
+  color: #eee;
+}
+
+body.dark-mode footer {
+  background: #111;
+}
+
+/* Toggle Button */
+.theme-btn {
+  background: none;
+  border: 2px solid #f4c542;
+  color: #f4c542;
+  font-size: 18px;
+  padding: 5px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.theme-btn:hover {
+  background: #f4c542;
+  color: #111;
+}
+
+#toc-container {
+  background: #f9f9f9;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  margin: 15px 0;
+}
+
+#toc-container h2 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+#toc li a {
+  display: block;
+  padding: 4px 0;
+  color: #0073e6;
+  text-decoration: none;
+}
+
+#toc li a:hover {
+  color: #005bb5;
+}
+
