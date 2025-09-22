@@ -86,7 +86,7 @@ img {
 
 .post-card img.post-thumb {
   width: 100%;
-  height: 500px;
+  height: 300px;
   object-fit: cover;
   border-radius: 8px;
   margin-bottom: 10px;
