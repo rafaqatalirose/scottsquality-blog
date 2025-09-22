@@ -46,16 +46,25 @@ layout: default
   }
 }
 </script>
-<!-- Related / All Posts Section -->
+
+<!-- All Posts Section with Thumbnails -->
 <section class="all-posts">
   <h2>All Posts</h2>
-  <ul>
+  <div class="all-posts-grid">
     {% for post in site.posts %}
       {% if post.url != page.url %}
-        <li>
-          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-        </li>
+        <div class="post-card-small">
+          {% if post.image %}
+            <a href="{{ post.url | relative_url }}">
+              <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" title="{{ post.title }}">
+            </a>
+          {% endif %}
+          <h3>
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          </h3>
+        </div>
       {% endif %}
     {% endfor %}
-  </ul>
+  </div>
 </section>
+
