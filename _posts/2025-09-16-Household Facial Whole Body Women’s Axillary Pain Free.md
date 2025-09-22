@@ -5,7 +5,7 @@ description: "Discover the T12 Photon Beauty Instrument – painless hair remova
 keywords: "Photon Beauty Instrument, T12 Beauty Device, Pain Free Hair Removal, Low-Level Light Therapy, Skin Rejuvenation Device, Home Skincare Gadget, Cold Laser Therapy, Women’s Beauty Instrument"
 author: "ScottsQualityImprovements Blog"
 thumbnail: "https://cf.cjdropshipping.com/98b2f63d-0b88-4a46-ba65-6fdd50261fa0.jpg?x-oss-process=image/resize,m_fill,w_1629,h_1629/format,webp"
-categories: ["beauty", "skincare", "reviews"]
+categories: ["skincare", "reviews"]
 tags: ["Photon Beauty Instrument", "Hair Removal", "Cold Laser Therapy", "Skin Softening", "Home Skincare Device"]
 ---
 
