@@ -267,3 +267,26 @@ body.dark-mode footer {
   background: #f4c542;
   color: #111;
 }
+
+/* Article container flex layout */
+article {
+  display: flex;
+  gap: 20px; /* content aur TOC ke beech gap */
+}
+
+/* TOC container */
+#toc-container {
+  position: sticky;
+  top: 80px; /* header ke height ke hisaab se adjust */
+  width: 200px; /* TOC width */
+  background: #f9f9f9;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  flex-shrink: 0; /* size fix rakho */
+}
+
+/* Article content */
+article > div {
+  flex: 1; /* content remaining space le */
+}
