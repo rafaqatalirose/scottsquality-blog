@@ -1,6 +1,6 @@
 ---
 layout: default
 title: "beauty"
-permalink: /categories/beauty/
 category: beauty
+permalink: /categories/beauty/
 ---
