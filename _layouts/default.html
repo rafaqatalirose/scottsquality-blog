@@ -3,12 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="{{ page.description | default: site.description }}">
-  <meta name="keywords" content="{{ page.tags | join: ', ' }}">
+
+  {%- if page.description -%}
+    <meta name="description" content="{{ page.description }}">
+  {%- else -%}
+    <meta name="description" content="{{ site.description }}">
+  {%- endif -%}
+
+  {%- if page.keywords -%}
+    <meta name="keywords" content="{{ page.keywords }}">
+  {%- elsif page.tags -%}
+    <meta name="keywords" content="{{ page.tags | join: ', ' }}">
+  {%- endif -%}
+
   <title>{{ page.title }} | {{ site.title }}</title>
+
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-  <link rel="icon" type="image/png" href="https://image.wed2c.com/2025/05/23/21/d14f861c-add6-460d-bf31-1a415205a088.jpg" alt="Scotts Quality" title="Scotts Quality">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" 
+        href="https://image.wed2c.com/2025/05/23/21/d14f861c-add6-460d-bf31-1a415205a088.jpg" 
+        alt="Scotts Quality" 
+        title="Scotts Quality">
+
+  <!-- Jekyll SEO Tag (Handles OpenGraph, Twitter Cards, Canonical, JSON-LD) -->
   {% seo %}
+
+  <!-- Extra includes -->
   {% include head.html %}
 </head>
 <body>
