@@ -4,6 +4,27 @@ baseurl: "" # agar repo naam ke saath nahi chalana
 url: "https://blog.scottsqualityimprovements.store"
 
 theme: minima
+
+# Permalinks ka fix - hamesha .html ke saath URLs banenge
+permalink: /:categories/:title:output_ext
+
+# Plugins for SEO & sitemap
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Sitemap config (optional but clean)
+sitemap:
+  exclude:
+    - /assets/
+    - /node_modules/
+  include_posts: true
+  include_collections: true
+  changefreq: daily
+  priority: 1.0
+
+# Author info (SEO me dikhne ke liye)
+author:
+  name: "ScottsQualityImprovements Blog"
+  email: "info@scottsqualityimprovements.store"
