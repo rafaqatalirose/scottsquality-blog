@@ -226,3 +226,44 @@ footer a:hover {
     width: 85%;
   }
 }
+/* =========================
+   Dark Mode
+========================= */
+body.dark-mode {
+  background: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode .site-header {
+  background: #111;
+}
+
+body.dark-mode .site-nav a {
+  color: #ddd;
+}
+
+body.dark-mode .post-card {
+  background: #1e1e1e;
+  color: #eee;
+}
+
+body.dark-mode footer {
+  background: #111;
+}
+
+/* Toggle Button */
+.theme-btn {
+  background: none;
+  border: 2px solid #f4c542;
+  color: #f4c542;
+  font-size: 18px;
+  padding: 5px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.theme-btn:hover {
+  background: #f4c542;
+  color: #111;
+}
