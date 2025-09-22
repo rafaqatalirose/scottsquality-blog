@@ -46,3 +46,16 @@ layout: default
   }
 }
 </script>
+<!-- Related / All Posts Section -->
+<section class="all-posts">
+  <h2>All Posts</h2>
+  <ul>
+    {% for post in site.posts %}
+      {% if post.url != page.url %}
+        <li>
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</section>
