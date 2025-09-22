@@ -47,13 +47,13 @@ layout: default
 }
 </script>
 
-<!-- All Posts Section with Thumbnails -->
+<!-- All Posts Section at the End of Each Post -->
 <section class="all-posts">
   <h2>All Posts</h2>
-  <div class="all-posts-grid">
+  <div class="posts-grid">
     {% for post in site.posts %}
       {% if post.url != page.url %}
-        <div class="post-card-small">
+        <div class="post-card">
           {% if post.image %}
             <a href="{{ post.url | relative_url }}">
               <img class="post-thumb" src="{{ post.image | relative_url }}" 
@@ -64,10 +64,14 @@ layout: default
           <h3>
             <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
           </h3>
+          <p>{{ post.excerpt | strip_html | truncate: 100 }}</p>
+          <a class="read-more" href="{{ post.url | relative_url }}">Read More</a>
         </div>
       {% endif %}
     {% endfor %}
   </div>
+</section>
+
 </section>
 
 
