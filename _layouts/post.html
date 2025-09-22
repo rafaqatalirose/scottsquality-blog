@@ -5,7 +5,37 @@ layout: default
 <article>
   <h1>{{ page.title }}</h1>
   <p><small>Published on {{ page.date | date: "%B %d, %Y" }}</small></p>
+
+  {% if page.image %}
+    <img src="{{ page.image | relative_url }}" 
+         alt="{{ page.title | escape }}" 
+         title="{{ page.title | escape }}" 
+         style="max-width:100%; height:auto; margin:15px 0;">
+  {% endif %}
+
   <div>
     {{ content }}
   </div>
 </article>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "{{ page.title | escape }}",
+  "description": "{{ page.excerpt | strip_html | truncate: 160 }}",
+  "author": {
+    "@type": "Person",
+    "name": "Scotts Quality Improvements"
+  },
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  "image": [
+    "{% if page.image %}{{ page.image | absolute_url }}{% endif %}",
+    "{% if page.thumbnail %}{{ page.thumbnail | absolute_url }}{% endif %}"
+  ],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ page.url | absolute_url }}"
+  }
+}
+</script>
