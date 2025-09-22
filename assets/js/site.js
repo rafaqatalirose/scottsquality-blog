@@ -52,10 +52,3 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-document.querySelectorAll('.dropdown > a').forEach(item => {
-  item.addEventListener('click', e => {
-    e.preventDefault();
-    const menu = item.nextElementSibling;
-    menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
-  });
-});
