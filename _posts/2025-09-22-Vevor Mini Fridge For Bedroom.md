@@ -6,7 +6,7 @@ keywords: "vevor mini fridge, skincare fridge, cosmetic refrigerator, mini fridg
 author: "ScottsQualityImprovements Blog"
 thumbnail: "https://cf.cjdropshipping.com/403dea02-574e-41aa-9100-330d929f0f16.jpg?x-oss-process=image/resize,w_1310/format,webp"
 img: "https://cf.cjdropshipping.com/403dea02-574e-41aa-9100-330d929f0f16.jpg?x-oss-process=image/resize,w_1310/format,webp"
-categories: ["Home Appliances", "Product Reviews", "Smart Living"]
+categories: ["Home", Reviews",]
 tags: ["vevor mini fridge","skincare fridge","bedroom fridge","cosmetic fridge","portable fridge"]
 ---
 
