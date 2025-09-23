@@ -1,4 +1,3 @@
-```markdown
 ---
 layout: post
 title: "VEVOR Electric Cotton Candy Machine with Cart: The Ultimate Commercial Floss Maker for Home & Events"
